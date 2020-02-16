@@ -1,14 +1,3 @@
-<h1>新增頁面</h1>
-<div>
-  <%= form_for(@product)do |form| %>
-  <tr>
-    <ul>名稱：<%= form.text_field :name %></ul>
-    <ul>原價：<%= form.text_field :list_price %></ul>
-    <ul>售價：<%= form.text_field :sell_price %></ul>
-    <ul>內容：<%= form.text_area :description %></ul>
-    <ul><%= form.submit %></ul>
-  </tr>
-  <% end %>
-</div>
+<h1 class = "d-flex justify-content-center">新增商品</h1>
 
-<%= link_to "返回",products_path%>
+<%= render 'form', product: @product%>

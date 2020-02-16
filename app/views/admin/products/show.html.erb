@@ -1,5 +1,5 @@
-<h1>商品首頁</h1>
-<%= form_for(@product)do |form| %>
+<h1 class = "d-flex justify-content-center">商品首頁</h1>
+<%= form_for([:admin,@product])do |form| %>
   <tr>
     <ul>名稱：<%= form.text_field :name %></ul>
     <ul>原價：<%= form.text_field :list_price %></ul>
