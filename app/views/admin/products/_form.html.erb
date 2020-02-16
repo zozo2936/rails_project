@@ -6,22 +6,27 @@
           <%= form.label :name, '名稱' %>
           <%= form.text_field :name %>
         </div>
+
         <div class = "form-group"> 
           <%= form.label :list_price, '原價' %>
           <%= form.text_field :list_price %>
         </div>
+
         <div class = "form-group"> 
           <%= form.label :sell_price, '售價' %>
           <%= form.text_field :sell_price %>
         </div>
+
         <div class ="form-group">
           <%= form.label :sku, 'SKU' %>
           <%= form.text_field :sku %>
         </div>
+
         <div class ="form-group">
-          <%= form.label :status, '狀態' %>
-          <%= form.text_field :status %>
+          <%= form.label :status, '商品狀態' %>
+          <%= form.select(:status, [['上架', 'on_shelves'],['下架', 'off'],['補貨中', 'stock']], {}) %>
         </div>
+
         <div class ="form-group">
           <%= form.label :description, '描述' %>
           <%= form.text_area :description %>

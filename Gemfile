@@ -25,9 +25,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
-# Reduces boot times through caching; required in config/boot.rb
+# Reduces boot times through caching; rdirect assignment of AASM column has been disabled (see AASM configuration for this classdirect assignment of AASM column has been disabled (see AASM configuration for this classequired in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'aasm', '~> 5.0', '>= 5.0.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
