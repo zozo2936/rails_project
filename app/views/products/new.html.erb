@@ -1,0 +1,15 @@
+<h1>新增頁面</h1>
+
+<div>
+  <%= form_with do |form| %>
+  <tr>
+    <td>名稱：<%= form.text_field :name %></td><br>
+    <td>原價：<%= form.text_field :list_price %></td><br>
+    <td>售價：<%= form.text_field :sell_price %></td><br>
+    <td>內容：<%= form.text_area :description %></td><br>
+    <td><%= form.submit %></td>
+  </tr>
+  <% end %>
+</div>
+
+<%= link_to "返回",products_path%>
