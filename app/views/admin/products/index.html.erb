@@ -4,14 +4,14 @@
   <div class="row">
     <% @products.each do |product|%>
       <div class = "col-4">
-        <%= link_to "圖片",product_path(product),method:'get'%>
+        <ul><%= link_to "圖片",admin_product_path(product)%></ul>
         <ul>名稱：<%= product.name %></ul>
         <ul>原價：<%= product.list_price %></ul>
         <ul>售價：<%= product.sell_price %></ul>
         <ul>狀態：<%= product.status %></ul>
-        <ul>作者：<%= product.user_id%></ul>
-        <ul><%= link_to "修改", edit_admin_product_path(product)%></ul>
-        <ul><%= link_to "刪除",admin_product_path(product), method: 'delete',data: {confirm: 'are you sure!?'}%></ul>
+        <ul>SKU：<%= product.sku%></ul>
+        <ul><%= link_to "修改", edit_admin_product_path(product),class:'btn btn-primary'%>
+        <%= link_to "刪除",admin_product_path(product), method: 'delete',data: {confirm: 'are you sure!?'},class:'btn btn-primary'%></ul>
       </div>
     <%end%>
   </div>

@@ -2,13 +2,13 @@
   <h1 class = "d-flex justify-content-center">首頁</h1>
   <div class="row">
     <% @products.each do |product|%>
-      <div class = "col-4">
-        <%= link_to "圖片",product_path(product)%>
+      <div class = "col-3">
+        <ul><%= link_to "圖片",product_path(product)%></ul>
         <ul>名稱：<%= product.name %></ul>
         <ul>原價：<%= product.list_price %></ul>
         <ul>售價：<%= product.sell_price %></ul>
         <ul>狀態：<%= product.status %></ul>
-        <ul>歸屬：<%= product.user_id%></ul>
+        <ul>SKU：<%= product.sku%></ul>
       </div>
     <%end%>
   </div>

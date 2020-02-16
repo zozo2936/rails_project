@@ -1,10 +1,36 @@
-<h1 class = "d-flex justify-content-center">商品首頁</h1>
-<%= form_for([:admin,@product])do |form| %>
-  <tr>
-    <ul>名稱：<%= form.text_field :name %></ul>
-    <ul>原價：<%= form.text_field :list_price %></ul>
-    <ul>售價：<%= form.text_field :sell_price %></ul>
-    <ul>內容：<%= form.text_area :description %></ul>
-    <ul><%= form.submit %></ul>
-  </tr>
+<h1 class = "d-flex justify-content-center">商品</h1>
+<div class = "container">
+  <%= form_for (@product) do |form| %>
+    <div class = "d-flex justify-content-center">
+      <div>
+        <div class = "form-group"> 
+          <%= form.label :name, '名稱' %>
+          <%= form.text_field :name %>
+        </div>
+        <div class = "form-group"> 
+          <%= form.label :list_price, '原價' %>
+          <%= form.text_field :list_price %>
+        </div>
+        <div class = "form-group"> 
+          <%= form.label :sell_price, '售價' %>
+          <%= form.text_field :sell_price %>
+        </div>
+        <div class ="form-group">
+          <%= form.label :sku, 'SKU' %>
+          <%= form.text_field :sku %>
+        </div>
+        <div class ="form-group">
+          <%= form.label :status, '狀態' %>
+          <%= form.text_field :status %>
+        </div>
+        <div class ="form-group">
+          <%= form.label :description, '描述' %>
+          <%= form.text_area :description %>
+        </div>
+      <%= link_to "返回",admin_products_path, class:'btn btn-primary'%>
+    </div>
+  </div>
   <% end %>
+</div>
+
+
