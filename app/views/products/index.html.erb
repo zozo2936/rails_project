@@ -1,14 +1,9 @@
 <h1>商品首頁</h1>
-<%= link_to "新增",new_product_path%>
 <div>
   <% @products.each do |product|%>
-    <tr>
-      <td>名稱：<%= product.name %></td>
-      <td>原價：<%= product.list_price %></td>
-      <td>售價：<%= product.sell_price %></td>
-      <td>狀態：<%= product.status %></td>
-      <td><%= link_to "修改", edit_product_path(product)%></td>
-      <td><%= link_to "刪除",product_path(product), method: 'delete',data: {confirm: 'are you sure!?'}%></td>
-    </tr><br>
+    <ul>名稱：<%= product.name %></ul>
+    <ul>原價：<%= product.list_price %></ul>
+    <ul>售價：<%= product.sell_price %></ul>
+    <ul>狀態：<%= product.status %></ul>
   <%end%>
 </div>
