@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Reduces boot times through caching; rdirect assignment of AASM column has been disabled (see AASM configuration for this classdirect assignment of AASM column has been disabled (see AASM configuration for this classequired in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
